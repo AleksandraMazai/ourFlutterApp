@@ -25,7 +25,7 @@ class MainScreen extends StatelessWidget {
   TextEditingController _pinCode = new TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Авторизация')),
+        appBar: AppBar(title: Text('Авторизация!')),
         body: new Container(
             padding: const EdgeInsets.all(40.0),
             child: new Column(
