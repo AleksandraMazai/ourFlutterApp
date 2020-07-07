@@ -33,7 +33,7 @@ class MainScreen extends StatelessWidget {
               children: <Widget>[
                 new TextField(
                   decoration:
-                      new InputDecoration(labelText: "Введите пин"),
+                      new InputDecoration(labelText: "Введите пин "),
                   keyboardType: TextInputType.number,
                   controller: _pinCode,
                 ),
