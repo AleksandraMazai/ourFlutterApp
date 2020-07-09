@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/CurencyList.dart';
+import 'package:flutterapp/XDsplash.dart';
 
 void main() {
   runApp(MaterialApp(
-      home: MainScreen(),
+      home: XDsplash(),
       debugShowCheckedModeBanner: false,
       title: 'Currency',
       theme: ThemeData(primarySwatch: Colors.amber)));
@@ -20,8 +21,8 @@ class CurrencyPB extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class MainScreen extends StatelessWidget {
-  @override
   TextEditingController _pinCode = new TextEditingController();
   Widget build(BuildContext context) {
     return Scaffold(
