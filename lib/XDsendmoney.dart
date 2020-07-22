@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class XDSendmoney extends StatelessWidget {
-  XDSendmoney({
+class XDsendmoney extends StatelessWidget {
+  XDsendmoney({
     Key key,
   }) : super(key: key);
   @override
