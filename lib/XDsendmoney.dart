@@ -5,6 +5,7 @@ class XDsendmoney extends StatelessWidget {
   XDsendmoney({
     Key key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

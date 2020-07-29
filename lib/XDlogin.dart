@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutterapp/XDnotification.dart';
 import 'XDsendmoney.dart';
 import 'XDsignup.dart';
 
@@ -303,7 +304,7 @@ class XDlogin extends StatelessWidget {
                               transition: LinkTransition.Fade,
                               ease: Curves.easeOut,
                               duration: 0.3,
-                              pageBuilder: () => XDsendmoney(),
+                              pageBuilder: () => XDnotification(),
                             ),
                           ],
                           child:
