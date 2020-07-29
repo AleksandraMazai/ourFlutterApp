@@ -100,6 +100,7 @@ class _XDsplashState extends State<XDsplash> {
                       child:
                       // Adobe XD layer: 'Group 2' (group)
                       Stack(
+
                         children: <Widget>[
                           // Adobe XD layer: 'Triangle 2' (shape)
                           SvgPicture.string(
