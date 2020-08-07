@@ -92,14 +92,14 @@ class NewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("AINVEST"),
+        title: Text("Брокерский счет"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.bookmark_border),
             onPressed: () {
               showDialog(context: context,
               builder: (_) => AlertDialog(
-                title: Text("In Work"),
+                title: Text("Best APP in Ukraine!"),
                 content: const Text(" "),
                 actions: <Widget>[
                   FlatButton(
@@ -127,56 +127,8 @@ class NewScreen extends StatelessWidget {
           color: Colors.white,
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-            gradient: LinearGradient(
-            begin: Alignment(0.0, -1.0),
-        end: Alignment(0.0, 1.0),
-        colors: [const Color(0xff383848), const Color(0xff22222c)],
-        stops: [0.0, 1.0],
-      ),
-    ),
-              accountEmail: Text("SKHLYZIN@gmail.com", style: TextStyle(color: Colors.white)),
-              accountName: Text("Хлызин Станислав", style: TextStyle(color: Colors.white)),
-              currentAccountPicture: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image(
-                    image: NetworkImage(
-                        "https://lh3.googleusercontent.com/-SqSvnGM5YvY/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucmG-q9Ui6DYCiKVB3pEa4T8RQf96g/photo.jpg?sz=46"),
-                  ),
-                ),
-              ),
-            ),
-            ListTile(
-              title: Text("Портфель"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Купить"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Чат"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Еще"),
-              onTap: () {},
-            ),
-            ListTile(
-              title: Text("Настройки"),
-              onTap: () {},
-            ),
-          ],
-        ),
-      ),
       body: Container(
-        color: Color(0xFFbdc3c7),
+        color: Color(0xff383848),
         width: MediaQuery.of(context).size.width,
         child: SingleChildScrollView(
 
@@ -198,97 +150,32 @@ class NewScreen extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
 
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10,),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget>[
-                            Text(
-                              "Баланс",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              "UAH",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+
 
                       Container(
-                        margin: EdgeInsets.symmetric(horizontal: 20,),
+                        margin: EdgeInsets.symmetric(horizontal: 60,),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
 
                             Text(
-                              "\₴9588 ",
+                              "9588 \₴",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 40,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            ),
-
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFB300),
-                                borderRadius: BorderRadius.circular(16),
-                              ),
-                              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                              child: Text(
-                                "+ 3.5 %",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold
-                                ),
-                              ),
-                            ),
-
-                          ],
-                        ),
-                      ),
-
-                      SizedBox(height: 80,),
-
-                      Container(
-                        margin: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
-                        child: Row(
-                          children: <Widget>[
-                            Text(
-                              "2620004445555",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
                       ),
-
                     ],
                   ),
                   margin: EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 40,
-                  ),
+                  horizontal: 70,
+                  vertical: 50,
+                ),
                   width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    gradient: LinearGradient(
-                      colors: [
-                        Color(0xFF8BC34A),
-                        Color(0xFFAED581),
-                      ],
-                    ),
-                  ),
                 ),
               ),
 
@@ -300,12 +187,13 @@ class NewScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
 
-
+                    SizedBox(width: 20,),
                     Expanded(
                       child: RaisedButton.icon(
+                        color: Colors.white,
                         onPressed: (){},
-                        icon: Icon(Icons.send, color: Color(0xff3498db),),
-                        label: Text("Отправить"),
+                        icon: Icon(Icons.add, color: Colors.black,),
+                        label: Text("Купить"),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -314,16 +202,6 @@ class NewScreen extends StatelessWidget {
 
                     SizedBox(width: 20,),
 
-                    Expanded(
-                      child: RaisedButton.icon(
-                        onPressed: (){},
-                        icon: Icon(Icons.attach_money, color: Color(0xFF2ecc71),),
-                        label: Text("Пополнить"),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                    ),
 
                   ],
                 ),
@@ -333,7 +211,7 @@ class NewScreen extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20,),
                 alignment: Alignment.topLeft,
-                child: Text("Сделки", style: TextStyle(fontSize: 22,),),
+                child: Text("Сделки", style: TextStyle(color: Colors.white, fontSize: 22,),),
               ),
 
               Container(
@@ -348,8 +226,8 @@ class NewScreen extends StatelessWidget {
                       child: ListTile(
                         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         leading: CircleAvatar(
-                          backgroundColor: Color(0xffecf0f1),
-                          child: Icon(Icons.tram, color: Color(0xFFf1c40f),),
+                          backgroundColor: Colors.white,
+                          child: Icon(Icons.tram, color: Colors.black,),
                         ),
                         title: Text("Tesla"),
                         trailing: Text("\₴8,000"),
@@ -366,7 +244,7 @@ class NewScreen extends StatelessWidget {
                         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         leading: CircleAvatar(
                           backgroundColor: Color(0xffecf0f1),
-                          child: Icon(Icons.desktop_windows, color: Color(0xFF2980b9),),
+                          child: Icon(Icons.desktop_windows, color: Colors.black,),
                         ),
                         title: Text("Windows"),
                         trailing: Text("\₴450"),
@@ -383,7 +261,7 @@ class NewScreen extends StatelessWidget {
                         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         leading: CircleAvatar(
                           backgroundColor: Color(0xffecf0f1),
-                          child: Icon(Icons.video_call, color: Color(0xff2ecc71),),
+                          child: Icon(Icons.video_call, color: Colors.black,),
                         ),
                         title: Text("Netflix"),
                         trailing: Text("\₴99"),
