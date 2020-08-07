@@ -181,6 +181,7 @@ class NewScreen extends StatelessWidget {
 
 
 
+
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20,),
                 child: Row(
