@@ -4,7 +4,6 @@ import 'package:adobe_xd/page_link.dart';
 import './XDlogin.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
-import 'XDStandardLogin.dart';
 
 
 class XDsplash extends StatefulWidget {
@@ -146,9 +145,10 @@ class GetAuth{
         useErrorDialogs: true,
         stickyAuth: true,
       );
+      print(isAuthorized);
 
     } on PlatformException catch (e) {
-      print('error');
+      print(e);
     }
 
   }
