@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/XDBudgetGoal.dart';
 import 'package:flutterapp/XDaddbankacc.dart';
 import 'package:flutterapp/XDaddcard.dart';
-import 'package:flutterapp/XDhome.dart';
 import 'package:flutterapp/XDinvitefriends.dart';
 import 'package:flutterapp/XDprofile.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+
+import 'AboutTicker.dart';
+import 'DetailTicker.dart';
+import 'XDSavings.dart';
 
 class ListTickers extends StatelessWidget {
   @override
@@ -233,6 +236,7 @@ class DetailInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var name = ticker.ticker;
     return  DefaultTabController(
         length: choices.length,
         child: Scaffold(
@@ -250,9 +254,11 @@ class DetailInfo extends StatelessWidget {
           ),
           body: TabBarView(
             children: <Widget>[
-              XDhome(),
-              XDinvitefriends(),
-              XDaddcard(),
+              DetailTicker(name),
+              AboutTicker(name),
+              XDSavings(),
+
+
               XDaddbankacc(),
               XDprofile(),
               XDBudgetGoal(),
@@ -261,106 +267,5 @@ class DetailInfo extends StatelessWidget {
           ),
         ),
       );
-  }
-}
-
-
-
-class DetailInfo2 extends StatelessWidget {
-  final Ticker ticker;
-
-  DetailInfo2(this.ticker);
-
-  @override
-  Widget build(BuildContext context) {
-    return new DefaultTabController(
-      length: 7,
-      child: new Scaffold(
-        body: new NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              new SliverAppBar(
-                title: Text(ticker.name),
-                forceElevated: innerBoxIsScrolled,
-                pinned: true,
-                floating: true,
-                bottom: new TabBar(
-                  tabs: <Tab>[
-                    new Tab(text: 'Детали'),
-                    new Tab(text: 'Обзор'),
-                    new Tab(text: 'Показатели'),
-                    new Tab(text: 'Прогноз'),
-                    new Tab(text: 'Новости'),
-                    new Tab(text: 'Идеи'),
-                    new Tab(text: 'Дивиденды'),
-                  ],
-                ),
-              ),
-            ];
-          },
-          body: new TabBarView(
-            children: <Widget>[
-              new Center(
-                child: new Container(
-                  color: Colors.green.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  color: Colors.blue.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  color: Colors.orange.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  height: 1000.0,
-                  color: Colors.purple.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  color: Colors.lime.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  color: Colors.redAccent.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.green),
-                  ),
-                ),
-              ),
-              new Center(
-                child: new Container(
-                  color: Colors.grey.shade200,
-                  child: new Center(
-                    child: new FlutterLogo(colors: Colors.purple),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }
